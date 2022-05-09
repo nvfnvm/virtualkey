@@ -1,0 +1,31 @@
+{
+  "name": "virtualkey",
+  "version": "1.0.0",
+  "description": "virtual-keyboard",
+  "main": "index.js",
+  "dependencies": {
+    "eslint": "^8.2.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-react": "^7.28.0",
+    "eslint-plugin-react-hooks": "^4.3.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nvfnvm/virtualkey.git"
+  },
+  "author": "Pavel Rodich",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nvfnvm/virtualkey/issues"
+  },
+  "homepage": "https://github.com/nvfnvm/virtualkey#readme",
+  "keywords": [
+    "virtual-keyboard"
+  ]
+}
