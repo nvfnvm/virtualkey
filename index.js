@@ -224,8 +224,6 @@ altRight.classList.add('alter');
 const space = document.querySelector('[keysList="Space"]');
 space.classList.add('space');
 const capsLock = document.querySelector('[keysList="CapsLock"]');
-const langSwitch = document.querySelector('[keysList="lang"]');
-
 // anim
 function toggleClass(event) {
   const elem = document.querySelector(`[keysList="${event.code}"]`);
@@ -256,7 +254,7 @@ const typeKey = (event) => {
     textarea.value = textarea.value.slice(0, -1);
   } else if (
     ['CapsLock', 'ShiftLeft', 'ShiftRight', 'ControlLeft', 'AltLeft', 'AltRight', 'ControlRight'].includes(event.code)
-    || [capsLock, shiftLeft, shiftRight, cntrlLeft, cntrlRight, altLeft, altRight, langSwitch]
+    || [capsLock, shiftLeft, shiftRight, cntrlLeft, cntrlRight, altLeft, altRight]
       .includes(event.target)) {
     textarea.value += '';
   } else if (event.code !== undefined) {
@@ -284,9 +282,9 @@ function changeKeys(data) {
   }
 }
 
-function changeLang(event) {
-  if (cntrlLeft.classList.contains('act') || event.target === langSwitch) {
-    if (altLeft.classList.contains('act') || event.target === langSwitch) {
+function changeLang() {
+  if (cntrlLeft.classList.contains('act')) {
+    if (altLeft.classList.contains('act')) {
       if (localStorage.lang === 'en') {
         localStorage.lang = 'ru';
         changeKeys(keysRu);
@@ -299,7 +297,6 @@ function changeLang(event) {
 }
 
 document.addEventListener('keydown', changeLang);
-langSwitch.addEventListener('click', changeLang);
 
 // Caps
 capsLock.classList.add('capslock');
