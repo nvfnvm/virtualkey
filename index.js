@@ -1,5 +1,5 @@
 /* eslint-disable linebreak-style */
-
+alert('Ссылка на репозиторий - https://github.com/nvfnvm/virtualkey');
 // keys
 
 const keysEn = [
